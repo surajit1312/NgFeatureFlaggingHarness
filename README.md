@@ -1,5 +1,7 @@
 # NgFeatureFlaggingHarness
 
+This is an angular application created to implement feature flags with Harness API.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.12.
 
 ## Development server
