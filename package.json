@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "install:lib": "npm i --registry=https://registry.npmjs.org",
+    "express": "nodemon server.js",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
