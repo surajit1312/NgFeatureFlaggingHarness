@@ -1,23 +1,32 @@
 {
-  "name": "ng-feature-flagging-harness",
+  "name": "ng-feature-flagging",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
+    "install:lib": "npm i --registry=https://registry.npmjs.org",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "lint:fix": "npx prettier ./src --write"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "^16.2.0",
+    "@angular/cdk": "^16.1.3",
     "@angular/common": "^16.2.0",
     "@angular/compiler": "^16.2.0",
     "@angular/core": "^16.2.0",
     "@angular/forms": "^16.2.0",
+    "@angular/material": "^16.1.3",
     "@angular/platform-browser": "^16.2.0",
     "@angular/platform-browser-dynamic": "^16.2.0",
     "@angular/router": "^16.2.0",
+    "@harnessio/ff-javascript-client-sdk": "^1.4.10",
+    "axios": "^1.6.7",
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "ngx-json-viewer": "^3.2.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"
@@ -33,6 +42,8 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "nodemon": "^2.0.7",
+    "prettier": "2.8.8",
     "typescript": "~5.1.3"
   }
 }
