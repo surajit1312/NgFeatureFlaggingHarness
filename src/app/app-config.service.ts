@@ -6,16 +6,13 @@ import {
   initialize,
   Event,
   VariationValue,
-  Result,
 } from '@harnessio/ff-javascript-client-sdk';
 import { UserDomainService } from './user-domain.service';
 
 import { environment } from '../environments/environment.development';
 
-const API_KEY = '65c472f7818a91109c83e281';
-
 const context = {
-  apiKey: '16bd0732-5f56-4cb7-8a45-554cee2cc8e7',
+  apiKey: environment.sdkKey,
   identifier: 'key',
   name: 'key',
   type: 'Client',
@@ -26,7 +23,7 @@ const context = {
 const HARNESS_API = {
   baseURL: 'https://app.harness.io/cf/admin',
   type: 'features',
-  accountIdentifier: 'JIDDlhRcTD6T_YXDYOeW4A',
+  accountIdentifier: environment.account,
   orgIdentifier: 'default',
   projectIdentifier: 'default_project',
   X_API_KEY: environment.apiKey,
@@ -55,7 +52,6 @@ export class AppConfigService {
       { identifier: context.identifier, attributes: {} },
       { baseUrl: context.baseURL, eventUrl: context.eventUrl }
     );
-    // this.clientFeature = cf;
     const featurePromise = new Promise((resolve, reject) => {
       cf.on(Event.READY, (flags: Record<string, VariationValue>) => {
         resolve(flags);
